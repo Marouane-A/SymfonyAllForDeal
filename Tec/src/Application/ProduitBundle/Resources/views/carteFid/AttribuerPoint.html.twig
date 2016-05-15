@@ -1,0 +1,28 @@
+{% extends 'ProduitBundle::layout2.html.twig' %}
+{% block t %}
+    <div class="page-content-wrap">                
+                
+     <table border="1">
+  <thead>
+    <tr>
+      <th>NumCarte</th>
+      <th>Validité</th>
+      <th>Nombre des points</th>
+      <th>Opération</th>
+    </tr>
+  </thead>
+  <tbody>
+   {% for c in carteFid%}
+    <tr>
+      <td><strong>{{c.numCarte}}</strong></td>
+      <td>{{c.validite|date('m/d/Y')}}</td>
+      <td>{{c.nbPoint}}</td>
+      <td> <a href="{{ path('modify', {'id': c.id} )}}"><img src="{{asset('/Tec/web/img/modif.jpg')}}" align="left" width="30" height="30"/></a>
+          <a href="{{ path('delete', {'id': c.id} )}}"><img src="{{asset('/Tec/web/img/supp.jpg')}}" align="right" width="30" height="30"/></a></td>
+    </tr>
+      {% endfor %}
+   </tbody>
+  </table>
+   </div>
+
+  {% endblock t %}

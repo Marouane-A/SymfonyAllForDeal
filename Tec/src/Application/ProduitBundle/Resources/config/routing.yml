@@ -1,0 +1,64 @@
+produit_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ProduitBundle:Default:index }
+produit_ajout:
+    path:     /ajout
+    defaults: { _controller: ProduitBundle:Produit:ajout }
+produit_afficheP:
+    path:     /afficheP
+    defaults: { _controller: ProduitBundle:Produit:afficheP }
+produit_supprimerP:
+    path:     /supprimerP/{id}
+    defaults: { _controller: ProduitBundle:Produit:supprimerP }
+produit_modifierP:
+    path:     /modifierP/{id}
+    defaults: { _controller: ProduitBundle:Produit:modifierP }
+produit_afficherPS:
+    path:     /afficherPS/{id}
+    defaults: { _controller: ProduitBundle:Produit:afficherPS }
+produit_rechercheP:
+    path:     /rechercheP
+    defaults: { _controller: ProduitBundle:Produit:rechercheP }
+produit_listerP:
+    path:     /listerP
+    defaults: { _controller: ProduitBundle:Produit:listerP }
+_ajouter_carte_fid:
+    path:     /AjouterCarteFid
+    defaults: { _controller: ProduitBundle:CarteFid:AjouterCarteFid }
+
+_attribuer_point:
+    path:     /AttribuerPoint
+    defaults: { _controller: ProduitBundle:CarteFid:AttribuerPoint }
+
+_consulter_nb_point:
+    path:     /ConsulterNbPoint
+    defaults: { _controller: ProduitBundle:CarteFid:ConsulterNbPoint }
+
+modify:
+    path:     /modify{id}
+    defaults: { _controller: ProduitBundle:CarteFid:modify }
+
+afficheCarte:
+    path:     /afficheCarte
+    defaults: { _controller: ProduitBundle:CarteFid:afficheCarte }
+    
+delete:
+    path:     /delete{id}
+    defaults: { _controller: ProduitBundle:CarteFid:delete }
+    
+produit_affichePForAllUsers:
+    path:     /affichePForAllUsers
+    defaults: { _controller: ProduitBundle:Produit:affichePForAllUsers }
+    
+produit_affichePSForAllUsers:
+    path:     /affichePSForAllUsers/{id}
+    defaults: { _controller: ProduitBundle:Produit:afficherPSForAllUsers }    
+produit_rechercheP:
+    path:     /rechercheP
+    defaults: { _controller: ProduitBundle:Produit:rechercheP }
+produit_recherchePByType:
+    path:     /recherchePByType/{categorie}
+    defaults: { _controller: ProduitBundle:Produit:recherchePByType }
+produit_recherchePByZone:
+    path:     /recherchePByZone/{zone}
+    defaults: { _controller: ProduitBundle:Produit:recherchePByZone }

@@ -1,0 +1,20 @@
+{% extends 'ProduitBundle::layout2.html.twig' %}
+{% block t %}
+ <header class="page-header"><h1>Les produits disponibles</h1>
+  </header>
+    <div name="Carte fidélité" class="box-lg">
+{% for c in carteFid %}
+    <fieldset >
+        
+    
+        <label><b>Numéro de carte </b></label><label name="numCarte"> {{c.numCarte}}</label><br>
+           <label><b>Date de validation </b></label><label name="dateValidation">  {{c.validite|date('m/d/Y')}}</label><br>
+           <label><b>Points bonus </b></label><label name="point bonus"> {{c.nbPoint}}</label><br><br>
+            <a class="btn btn-lg btn-ghost btn-black" href="{{path('modify', {'id':c.id})}}">Modifier </a>
+            <a class="btn btn-lg btn-ghost btn-black" href="{{path('delete', {'id':c.id})}}">Supprimer </a> <br>
+            <br>
+    </fieldset>
+
+{% endfor %}
+    </div>
+{% endblock %}

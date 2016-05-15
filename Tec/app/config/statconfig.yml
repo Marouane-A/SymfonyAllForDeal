@@ -1,0 +1,4 @@
+liuggio_stats_d_client:
+  connection:
+    host: localhost
+    port: 8125

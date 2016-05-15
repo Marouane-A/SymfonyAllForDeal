@@ -1,0 +1,18 @@
+{# empty Twig template #}
+{% extends "ServiceBundle::layout2.html.twig" %}
+{% block t %}
+     <div  id="results" class="boc-lg"></div>
+ {% for c in serv%}
+     <div name="TypeService" class="box-lg">
+ <fieldset >
+     <legend >Catégorie:<label name="type">{{c.type}}</label><br></legend>
+<label><b>Nom de service:</b></label><label name="nom">{{c.nomService}}</label><br>
+<label><b>Date d'ajout:</b></label><label name="dateAjout">{{c.dateAjout|date('m/d/Y')}}</label><br>
+<label><b>Description :</b></label><label name="decription">{{c.description}}</label><br>
+<label><b>Gouvernerat:</b></label><label name="zone">{{c.zone.nom}}</label><br>
+<label><b>Etat:</b></label><label name="etat">{{c.etat}}</label><br>
+<a class="btn btn-lg btn-ghost btn-black" href="{{path('service_afficher', {'id':c.id})}}">Consulter</a><br><div></div><br>
+ </fieldset >
+{% endfor %}
+ </div>
+{% endblock  %}

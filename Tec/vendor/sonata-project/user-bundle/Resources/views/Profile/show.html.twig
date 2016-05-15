@@ -1,0 +1,62 @@
+{#
+
+This file is part of the Sonata package.
+
+(c) Thomas Rabaix <thomas.rabaix@sonata-project.org>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+
+#}
+
+{% extends "SonataUserBundle:Profile:action.html.twig" %}
+
+{% block sonata_profile_content %}
+  <h1>HELLO</h1>
+  
+      <div name="Service" class="box-lg">
+
+ <fieldset >
+    
+     <legend >Nom d'utilisateur:<label name="type"><h1>{{user.username}}</h1></label><br></legend>
+<label><b>Email:</b></label><label name="nom">{{user.email}}</label><br>
+<label><b>Prenom:</b></label><label name="dateAjout">{{user.firstname}}</label><br>
+<label><b>Nom :</b></label><label name="decription">{{user.lastname}}</label><br>
+<label><b>Numero de telephone:</b></label><label name="zone">{{user.phone}}</label><br>
+<label><b>Date de naissance:</b></label><label name="zone">{{user.dateofbirth|date('Y-m-d')}}</label><br>
+<label><b>Date de derniére modification du compte</b></label><label name="zone">{{user.updatedat|date('Y-m-d H:i:s')}}</label><br>
+<label><b>Date de creation de compte:</b></label><label name="zone">{{user.createdat|date('Y-m-d H:i:s')}}</label><br>
+<label><b>Date de Dernire visite:</b></label><label name="etat">{{user.lastlogin|date('Y-m-d H:i:s')}}</label><br>
+</div>
+    
+    <div class="row row-fluid">
+      
+        {% set has_center = false %}
+        {% for block in blocks %}
+            {% if block.position == 'center' %}
+                {% set has_center = true %}
+            {% endif %}
+        {% endfor %}
+
+        <div class="{% if has_center %}span4 col-lg-4{% else %}span6 col-lg-6{% endif %}">
+            {% for block in blocks %}
+                {% if block.position == 'left' %}
+                    {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
+                {% endif %}
+            {% endfor %}
+        </div>
+
+        {% if has_center %}
+            <div class="span4 col-lg-4">
+                {% for block in blocks %}
+                    {% if block.position == 'center' %}
+                        {{ sonata_block_render({ 'type': block.type, 'settings': block.settings}) }}
+                        
+                    {% endif %}
+                {% endfor %}
+            </div>
+        {% endif %}
+
+       
+    </div>
+{% endblock %}

@@ -1,0 +1,66 @@
+{% extends 'ProduitBundle::layout2.html.twig' %}
+{% block x %}
+
+
+ <form method="POST" class="navbar-form navbar-left navbar-main-search" >
+                        <div class="form-group">
+                            <input name="nomService" class="form-control" type="text" placeholder="rechercher un produit..." />
+                        </div>
+                      <a class="fa fa-search navbar-main-search-submit" href="#"></a>
+                    </form>
+{% endblock  %}
+{% block t %}
+
+    <header class="page-header">
+        <h1>Modifierun produit</h1>
+    </header>
+    <div name="Service" class="box-lg">
+          <form action=""  method="post" enctype='multipart/form-data' >
+        <form action=""  method="post" > 
+            <div class="form-group">
+                <label>nomP</label>
+                <input class="form-control" {{ form_widget(Form.nomP)}}
+            </div>
+            <div class="form-group">Catégorie :
+                     {{ form_widget(Form.categorie,{'attr':{'class':'category-selections-select'}}) }}
+             </select>
+            </div>
+             <div class="form-group">
+                <label>Description</label>
+                       <textarea class="form-control"{{ form_widget(Form.description) }}</textarea>
+            </div>
+            <div class="form-group">
+                <label>prix</label>
+                <input class="form-control" {{ form_widget(Form.prix) }}
+            </div>
+            <div class="form-group">
+                <label>tva</label>
+                <input class="form-control" {{ form_widget(Form.tva) }}
+            </div>
+            <div class="form-group">
+                <label>reduction</label>
+                <input class="form-control" {{ form_widget(Form.reduction) }}
+            </div>
+            <div class="form-group">
+                <label>quantite</label>
+                <input class="form-control" {{ form_widget(Form.quantite) }}
+            </div>
+             <div class="form-group">Gouvernorat :
+                     {{ form_widget(Form.zone,{'attr':{'class':'category-selections-select'}}) }}
+                </select>
+            </div>
+
+            {{ form_widget(Form.Modifier,{'attr':{'class':'btn btn-primary'}}) }}
+                <a class="btn btn-primary" href="{{ path('produit_afficheP') }}"> Annuler </a>
+{{ form_rest(Form) }}
+
+        </form>
+
+    </div>
+    
+
+{% endblock %}
+
+
+
+ 

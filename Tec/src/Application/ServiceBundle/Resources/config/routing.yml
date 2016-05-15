@@ -1,0 +1,50 @@
+service_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: ServiceBundle:Default:index }
+service_ajout:
+    path:     /ajout
+    defaults: { _controller: ServiceBundle:Service:ajout }
+    
+service_offre:
+    path:     /offre
+    defaults: { _controller: ServiceBundle:Service:offre }
+
+service_offreValide:
+    path:     /offreValide
+    defaults: { _controller: ServiceBundle:Service:offreValide }
+    
+service_modifier:
+    path:     /modifier/{id}
+    defaults: { _controller: ServiceBundle:Service:modifier }
+    
+service_supprimer:
+    path:     /supprimer/{id}
+    defaults: { _controller: ServiceBundle:Service:supprimer }
+    
+service_afficher:
+    path:     /afficher/{id}
+    defaults: { _controller: ServiceBundle:Service:afficher }
+    
+service_listerServices:
+    path:     /listerServices/{id}
+    defaults: { _controller: ServiceBundle:Service:listerServices}
+    
+service_recherche:
+    path:     /recherche
+    defaults: { _controller: ServiceBundle:Service:recherche}
+    
+service_rechercheType:
+    path:     /rechercheType/{type}
+    defaults: { _controller: ServiceBundle:Service:rechercheType}
+    
+service_mesService:
+    path:     /mesService
+    defaults: { _controller: ServiceBundle:Service:mesServices}
+
+service_rechercheZone:
+    path:     /rechercheZone/{zone}
+    defaults: { _controller: ServiceBundle:Service:rechercheZone}
+ 
+service_gestion:
+    path:     /gestion
+    defaults: { _controller: ServiceBundle:Service:gestion }

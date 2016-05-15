@@ -1,0 +1,53 @@
+{% extends 'ProduitBundle::layout2.html.twig' %}
+{% block t %}
+    <div class="page-content-wrap">                
+
+        <div class="row">
+            <div class="col-md-12">
+                <form action="" method="post">
+                    <!-- START VALIDATIONENGINE PLUGIN -->
+                    <div class="block">
+                        <h4>Ajouter Carte Fidélité</h4>                                
+                        <form id="validate" role="form" class="form-horizontal" action="javascript:alert('Form #validate submited');">                            
+                            <table>
+                                <tr>
+                                <div class="form-group col-md-12">
+                                    <td><label class="control-label">Numéro de la carte:</label></td>
+                                    <td><div {#class="col-md-12"#}>
+                                            {{form_widget(Form.numCarte,{ 'attr': {'class': 'validate[required,maxSize[8]] form-control'} })}}
+
+                                        </div></td>
+                                </div>
+                                </tr>
+                                <tr>
+                                <div class="form-group col-md-12 ">
+                                    <td><label class="control-label">Validité:</label></td>
+                                    <td><div {#class="col-md-12">#}>
+                                        {{form_widget(Form.validite,{ 'attr': {'class': 'validate[required,maxSize[8]] form-control'} })}}
+                                    </td>
+                                </div>
+                                </div> 
+                                </tr>
+                                <tr>
+                                <div class="form-group col-md-12">
+                                    <td><label class=" control-label">Nombre des point à attribuer:</label></td>
+                                    <td><div {#class="col-md-12"#}>
+                                            {{form_widget(Form.nbPoint,{ 'attr': {'class': 'validate[required,maxSize[8]] form-control'} })}}
+                                        </div</td>
+                                </div>  
+                                </tr>
+                                <tr>
+                                    <td colspan="2">
+                                
+                                     {{ form_widget(Form.Ajouter,{'attr':{'class':'btn btn-primary'}}) }}
+                                     {{ form_rest(Form) }}
+                                
+                                </td>
+                                </tr>
+                            </table>
+                                    <br>
+                        </form>                                   
+                </form>
+            </div>               
+        </div>
+    {% endblock t %}

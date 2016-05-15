@@ -1,0 +1,13 @@
+ecommerce_homepage:
+    path:     /
+    defaults: { _controller: EcommerceBundle:Default:index }
+ecommerce_panierAjout:
+    path:     /panierAjout/{id}/{nom}/{prix}
+    defaults: { _controller: EcommerceBundle:Panier:ajouter }
+ecommerce_panierAffichage:
+    path:     /panierAffichage
+    defaults: { _controller: EcommerceBundle:Panier:panier }
+ecommerce_panierSupprimer:
+    path:     /panierSupprimer/{id}
+    defaults: { _controller: EcommerceBundle:Panier:supprimer }
+

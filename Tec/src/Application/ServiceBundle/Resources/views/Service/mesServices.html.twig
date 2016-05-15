@@ -1,0 +1,31 @@
+
+{% extends "ServiceBundle::layout2.html.twig" %}
+{% block x %}
+
+ <div  id="results" class="boc-lg"></div>
+
+{% endblock  %}
+{% block t %}
+  <header class="page-header"><h1>Mes offres</h1>
+  </header>
+<div name="Service" class="box-lg">
+{% for c in serv%}
+ <fieldset >
+     <legend >Catégorie:<label name="type">{{c.type}}</label><br></legend>
+<label><b>Nom de service :</b></label><label name="nom">{{c.nomService}}</label><br>
+<label><b>Date d'ajout:</b></label><label name="dateAjout">{{c.dateAjout|date('m/d/Y')}}</label><br>
+<label><b>Description:</b></label><label name="decription">{{c.description}}</label><br>
+<label><b>Gouvernerat:</b></label><label name="zone">{{c.zone.nom}}</label><br>
+<label><b>Etat:</b></label><label name="etat">{{c.etat}}</label><br>
+<a class="btn btn-lg btn-ghost btn-black" href="{{ path('service_offre') }}"> Retourner au services </a>
+ <a class="btn btn-lg btn-ghost btn-black" href="{{path('service_modifier', {'id':c.id})}}">Modifier</a>
+                    <a class="btn btn-lg btn-ghost btn-black" href="{{path('service_supprimer', {'id':c.id})}}">Supprimer </a>
+                    <a class="btn btn-lg btn-ghost btn-black" href="{{path('service_afficher', {'id':c.id})}}">Consulter</a><br><div></div><br>
+
+ </fieldset >
+ {{ socialButtons() }}
+{% endfor %}
+</div>
+{% endblock  %}
+
+

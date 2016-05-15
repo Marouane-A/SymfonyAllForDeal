@@ -1,0 +1,78 @@
+{% extends 'EcommerceBundle::layout2.html.twig' %}
+{% block t %}
+   
+ 
+    
+    
+  <div class="container">
+     
+                            
+                   
+            <header class="page-header">
+                <h1 class="page-title">My Shopping Bag</h1>
+            </header>
+            <div class="row">
+                <div class="col-md-10">
+                    <table class="table table table-shopping-cart">
+                        
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Title</th>
+                                <th>Price</th>
+                                <th>Quality</th>
+                                <th>Total</th>
+                                <th>Remove</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% set i=0 %}
+                            {% for x in ids %}
+                            <tr>
+                                <td class="table-shopping-cart-img">
+                                    <a href="#">
+                                        <img src="img/cart/1.jpg" alt="Image Alternative text" title="Image Title" />
+                                    </a>
+                                </td>
+                                <td class="table-shopping-cart-title"><a href="#">{{names[i]}}</a>
+                                </td>
+                                
+                                <td>{{prices[i]}} $</td>
+                                <td>
+                                    <input class="form-control table-shopping-qty" type="text" value="{{qnts[i]}}" />
+                                </td>
+                                <td>{{prices[i] * qnts[i]}} $</td>
+                                <td>
+  
+                                    <a class="fa fa-close table-shopping-remove" href="{{ path('ecommerce_panierSupprimer',{'id':x})}}"></a>
+                                    <!-- <a class="fa fa-close table-shopping-remove" href="{{ path('ecommerce_panierSupprimer',{'id':x})}}"></a> -->
+                                </td>
+                                {% set i=i+1 %}
+                            </tr>
+                            {% endfor %}
+                           
+                        </tbody>
+                    </table>
+                    <div class="gap gap-small"></div>
+                </div>
+                <div class="col-md-2">
+                    <ul class="shopping-cart-total-list">
+                        <li><span>Prix</span><span>$2199</span>
+                        </li>
+                        <li><span>Shopping</span><span>Free</span>
+                        </li>
+                        <li><span>Taxes</span><span>$0</span>
+                        </li>
+                        <li><span>Total</span><span>$2199</span>
+                        </li>
+                    </ul><a class="btn btn-primary" href="#">Checkout</a>
+                </div>
+            </div>
+            <ul class="list-inline">
+                <li><a class="btn btn-default" href="#">Continue Shopping</a>
+                </li>
+                <li><a class="btn btn-default" href="#">Update Bag</a>
+                </li>
+            </ul>
+        </div>
+{% endblock %}

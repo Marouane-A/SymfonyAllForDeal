@@ -1,0 +1,17 @@
+{% extends "ProduitBundle::layout2.html.twig" %}
+{% block t %}
+ {% for p in produit%}
+     <div name="Typeproduit" class="box-lg">
+ <fieldset >
+    <legend >Categorie :{{p.categorie}}</legend>
+                <label><b> Produit :</b></label><label name="nomP">{{p.nomP}}</label><br>
+                <label><b>Prix sans réduction :</b></label><label name="prix">{{p.prix}}</label><br>
+                <label><b>Reduction :</b></label><label name="prix">{{p.reduction}}</label><br>
+                <label><b>Prix avec reduction:</b></label><label name="prix">{{p.prix1}}</label><br>
+                <label><b>Gouvernorat:</b></label><label name="gouvernorat">{{p.zone.nom}}</label><br>
+                <a class="btn btn-lg btn-ghost btn-black" href="{{ path('produit_afficheP') }}"> Retourner au produits </a>
+          <a class="btn btn-lg btn-ghost btn-black" href="{{ path('produit_afficherPS',{'id':p.id}) }}"> Consulter </a>
+ </fieldset >
+{% endfor %}
+ </div>
+{% endblock  %}

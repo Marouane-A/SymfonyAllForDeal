@@ -1,0 +1,24 @@
+{% extends 'ProduitBundle::layout2.html.twig' %}
+{% block t %}
+<html>
+    <head>
+  
+</head>
+<form action ="{{path('application_mail_sendMail')}}" method="POST">
+    
+  
+  
+    </br>
+    <h5> Subject: </h5>
+    <input type ="text" name="subject"class="newsletter-input form-control" >
+    <br />
+    <h5> Email </h5>
+    <input type="text" name="email"class="newsletter-input form-control" > 
+    </br>
+    <h5> Text: </h5>
+    <Textarea name="message" class="newsletter-input form-control" > </textarea>
+    <input type ="submit" value ="send" class="btn btn-lg btn-ghost btn-black"/>
+    
+    </form>
+</html>
+{% endblock  %}
