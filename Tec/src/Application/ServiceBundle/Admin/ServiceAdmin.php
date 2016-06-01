@@ -19,7 +19,8 @@ class ServiceAdmin extends Admin
                        array('class'=>'ServiceBundle:Zone',
                            'property'=>'nom',
                            
-                           'label'=>'zone : '))    
+                           'label'=>'zone : '))   
+                ->add('dateAjout','date', array( 'data' => new \DateTime()))
             ->add('user', 'entity', array('class' => 'Application\Sonata\UserBundle\Entity\User'))
                 
             ->add('enable', 'checkbox', array('required' => false))
@@ -42,7 +43,7 @@ class ServiceAdmin extends Admin
     protected function configureListFields(ListMapper $listMapper)
     {
         $listMapper
-            ->add('nomService')
+            ->addIdentifier('nomService')
             ->add('user')    
             
         ;

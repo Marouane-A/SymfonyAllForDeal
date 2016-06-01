@@ -12,3 +12,5 @@ parameters:
     mailer_password: lilya11369379
     locale: fr
     secret: ThisTokenIsNotSoSecretChangeIt
+  
+    

@@ -42,14 +42,12 @@ class ServiceController extends Controller {
         $form->handleRequest($request);
 
         if ($form->isValid()) {
-            try {
+           $serv->setEnable(1);
                 $em = $this->getDoctrine()->getManager();
                 $em->persist($serv);
                 $em->flush();
                 return $this->redirectToRoute('service_offre');
-            } catch (\Doctrine\DBAL\DBALException $e) {
-                return new \Symfony\Component\HttpFoundation\Response("Voulez vous compléter tous les champs");
-            }
+           
         }
 
         return $this->render('ServiceBundle:Service:ajout.html.twig', array('Form' => $form->createView())); //schéma twig

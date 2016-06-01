@@ -315,13 +315,13 @@ class __TwigTemplate_901439969af801480e9045b55cf081187deda21729e880ba2718f50062f
     }
 
     // line 112
-    public function getdisplay_message($__log_index__ = null, $__log__ = null, $__is_deprecation__ = null)
+    public function getdisplay_message($__log_index__ = null, $__log__ = null, $__is_deprecation__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "log_index" => $__log_index__,
             "log" => $__log__,
             "is_deprecation" => $__is_deprecation__,
-            "varargs" => func_num_args() > 3 ? array_slice(func_get_args(), 3) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();

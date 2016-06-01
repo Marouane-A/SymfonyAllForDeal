@@ -353,15 +353,16 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
             echo "
                     </a>
+                        
                 ";
         } else {
-            // line 127
+            // line 128
             echo "                    ";
             echo $this->env->getExtension('actions')->renderUri($this->env->getExtension('http_kernel')->controller("FOSUserBundle:Security:login"), array());
-            // line 128
+            // line 129
             echo "                ";
         }
-        // line 129
+        // line 130
         echo "                <div class=\"gap gap-small\"></div>
                 <ul class=\"list-inline\">
                     <li><a href=\"#nav-account-dialog\" class=\"popup-text\">Not Member Yet</a>
@@ -415,12 +416,29 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                     <div class=\"navbar-header\">
                         <button class=\"navbar-toggle collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#main-nav-collapse\" area_expanded=\"false\"><span class=\"sr-only\">Main Menu</span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span>
                         </button>
-                        <a class=\"navbar-brand\" href=\"index.html\">
-                            <img src=\"";
+                        <a class=\"navbar-brand\" href=\"";
         // line 183
+        echo $this->env->getExtension('routing')->getPath("ecommerce_homepage");
+        echo "\">
+                            <img src=\"";
+        // line 184
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/LOGOAFD.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
                         </a>
+                         </li>
+                        
+                                  <a class=\"navbar-brand\" href=\"";
+        // line 188
+        echo $this->env->getExtension('routing')->getPath("service_offre");
+        echo "\">Services</a>
+                                
+                                
+                                <a class=\"navbar-brand\" href=\"";
+        // line 191
+        echo $this->env->getExtension('routing')->getPath("produit_affichePForAllUsers");
+        echo "\">Produits</a>
+                                
+                            
                     </div>
                     <div class=\"rel\">
   
@@ -438,36 +456,46 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                         </form>
                         <ul class=\"nav navbar-nav navbar-right navbar-right-no-mar navbar-nav-lg\">
                             ";
-        // line 201
+        // line 210
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
-            // line 202
+            // line 211
             echo "                                <li class=\"dropdown yamm-fw\">
 
                                     <a href=\"";
-            // line 204
+            // line 213
             echo $this->env->getExtension('routing')->getPath("fos_user_security_logout");
             echo "\">
                                         ";
-            // line 205
+            // line 214
             echo twig_escape_filter($this->env, $this->env->getExtension('translator')->trans("layout.logout", array(), "FOSUserBundle"), "html", null, true);
             echo "
                                     </a>
+                                    
 
                                 </li>
+                                 <li class=\"dropdown yamm-fw\">
+                                <a href=\"";
+            // line 220
+            echo $this->env->getExtension('routing')->getPath("sonata_user_profile_show");
+            echo "\">Profile</a>
+                                
                             ";
         } else {
-            // line 210
+            // line 223
             echo "                                <li><a href=\"#nav-login-dialog\" data-effect=\"mfp-move-from-top\" class=\"popup-text\">
                                         Bonjour, Connectez-vous</a>
+                               
                                     ";
         }
-        // line 213
+        // line 227
         echo "                            <li class=\"dropdown\">
                                 <a class=\"fa fa-shopping-cart\" href=\"shopping-cart.html\"></a>
                                 <ul class=\"dropdown-menu dropdown-menu-shipping-cart\">
                                     <li>
                                 </ul>
+                                
                                 </div>
+                            
                                 </div>
                                 </nav>
 
@@ -480,53 +508,53 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                 <ul class=\"dropdown-menu dropdown-menu-category dropdown-menu-category-hold dropdown-menu-category-sm\">
 
                                                     <li><a href=\"";
-        // line 230
+        // line 246
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "2"));
         echo "\"><i class=\"fa fa-tags dropdown-menu-category-icon\"></i>Vêtements</a>
 
                                                     </li>
                                                     <li><a href=\"";
-        // line 233
+        // line 249
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "3"));
         echo "\"><i class=\"fa fa-video-camera dropdown-menu-category-icon\"></i>Multimedia</a>
                                                     </li>
                                                     </li>
                                                     <li><a href=\"";
-        // line 236
+        // line 252
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "4"));
         echo "\"><i class=\"fa fa-plug dropdown-menu-category-icon\"></i>Electromenager</a>
                                                     </li>
                                                     </li>
                                                     <li><a href=\"";
-        // line 239
+        // line 255
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "5"));
         echo "\"><i class=\"fa fa-desktop dropdown-menu-category-icon\"></i>Informatique</a>
                                                     </li>
                                                     <li><a href=\"";
-        // line 241
+        // line 257
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "6"));
         echo "\"><i class=\"fa fa-building dropdown-menu-category-icon\"></i>Immobilier</a> 
                                                     </li> 
                                                     <li><a href=\"";
-        // line 243
+        // line 259
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "7"));
         echo "\"><i class=\"fa fa-automobile dropdown-menu-category-icon\"></i>Véhicules</a>
 
                                                     </li>
                                                     <li><a href=\"";
-        // line 246
+        // line 262
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "8"));
         echo "\"><i class=\"fa fa-home dropdown-menu-category-icon\"></i>Maison et Jardin</a>
 
                                                     </li>
                                                     <li><a href=\"";
-        // line 249
+        // line 265
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "9"));
         echo "\"><i class=\"fa fa-diamond dropdown-menu-category-icon\"></i>Bijoux</a>
 
                                                     </li>
                                                     <li><a href=\"";
-        // line 252
+        // line 268
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "10"));
         echo "\"><i class=\"fa fa-child dropdown-menu-category-icon\"></i>enfants et jouets</a>
 
@@ -534,13 +562,13 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 
 
                                                     <li><a href=\"";
-        // line 257
+        // line 273
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "11"));
         echo "\"><i class=\"fa fa-futbol-o dropdown-menu-category-icon\"></i>Sports</a>
 
                                                     </li>
                                                     <li><a href=\"";
-        // line 260
+        // line 276
         echo $this->env->getExtension('routing')->getPath("produit_recherchePByType", array("categorie" => "13"));
         echo "\"><i class=\"fa fa-picture-o dropdown-menu-category-icon\"></i>Art & Design</a>
 
@@ -559,7 +587,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                                 <p class=\"slider-item-caption-desc\">Be First to get one just from \$500</p><a class=\"btn btn-lg btn-ghost btn-white\" href=\"#\">Shop Now</a>
                                                             </div>
                                                             <img class=\"slider-item-img-left\" src=\"";
-        // line 276
+        // line 292
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_slider/16.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Image Title\" style=\"left: 7%; top: 60%; width: 19%;\" />
                                                         </div>
@@ -573,7 +601,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                                 <p class=\"slider-item-caption-desc\">I'm Not Gonna Pay A Lot For This Laptop.</p><a class=\"btn btn-lg btn-ghost btn-white\" href=\"#\">Shop Now</a>
                                                             </div>
                                                             <img class=\"slider-item-img-right\" src=\"";
-        // line 287
+        // line 303
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_slider/1.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Image Title\" style=\"top: 60%; width: 66%; right: -14%;\" />
                                                         </div>
@@ -587,7 +615,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                                 <p class=\"slider-item-caption-desc\">Your Running Shoes, Right Away.</p><a class=\"btn btn-lg btn-ghost btn-white\" href=\"#\">Shop Now</a>
                                                             </div>
                                                             <img class=\"slider-item-img-right\" src=\"";
-        // line 298
+        // line 314
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_slider/3.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
                                                         </div>
@@ -604,17 +632,17 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                     
                                     <div class=\"owl-carousel owl-loaded owl-nav-out\" data-options='{\"items\":5,\"loop\":true,\"nav\":true}'>
                                         ";
-        // line 312
+        // line 328
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) ? $context["produits"] : $this->getContext($context, "produits")));
         foreach ($context['_seq'] as $context["_key"] => $context["p"]) {
-            // line 313
+            // line 329
             echo "                                        <div class=\"owl-item\">
                                             <div class=\"product  owl-item-slide\">
                                                  
                                                 <div class=\"product-img-wrap\">
                                                     <img class=\"product-img\" src=\" ";
-            // line 317
+            // line 333
             echo $this->env->getExtension('sonata_media')->path($this->getAttribute($context["p"], "media", array()), "small");
             echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
                                                 </div>
@@ -622,14 +650,16 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                 <div class=\"product-caption\">
                                                   
                                                     <h5 class=\"product-caption-title\">";
-            // line 322
+            // line 338
             echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "nomP", array()), "html", null, true);
             echo "</h5>
                                                     <div class=\"product-caption-price\"><span class=\"product-caption-price-old\">";
-            // line 323
+            // line 339
             echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "prix", array()), "html", null, true);
-            echo "</span><span class=\"product-caption-price-new\">";
-            echo twig_escape_filter($this->env, $this->getAttribute($context["p"], "tva", array()), "html", null, true);
+            echo "</span><span class=\"product-caption-price-new\"> ";
+            $context["prix"] = ($this->getAttribute($context["p"], "prix", array()) - $this->getAttribute($context["p"], "reduction", array()));
+            echo " ";
+            echo twig_escape_filter($this->env, (isset($context["prix"]) ? $context["prix"] : $this->getContext($context, "prix")), "html", null, true);
             echo "DT</span>
                                                     </div>
                                                 </div>
@@ -642,42 +672,42 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['p'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 331
+        // line 347
         echo "                                    </div>
                                                   
                                     <div class=\"gap\"></div>
                                      <h3 class=\"widget-title\">Services Disponibles</h3>
                                      <div class=\"owl-carousel owl-loaded owl-nav-out\" data-options='{\"items\":5,\"loop\":true,\"nav\":true}'>
                                         ";
-        // line 336
+        // line 352
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["services"]) ? $context["services"] : $this->getContext($context, "services")));
         foreach ($context['_seq'] as $context["_key"] => $context["c"]) {
-            // line 337
+            // line 353
             echo "                                        <div class=\"owl-item\">
                                             <div class=\"product  owl-item-slide\">
                                                  
                                                 <div class=\"product-img-wrap\">
                                                       <h5 class=\"banner-category-title\"> ";
-            // line 341
+            // line 357
             echo twig_escape_filter($this->env, $this->getAttribute($context["c"], "nomService", array()), "html", null, true);
             echo "</h5>
                                                 </div>
                                                 <a class=\"product-link\" href=\"#\"></a>
                                                 <div class=\"product-caption\">
                                                    <h5 class=\"banner-category-title\"> ";
-            // line 345
+            // line 361
             echo twig_escape_filter($this->env, $this->getAttribute($context["c"], "type", array()), "html", null, true);
             echo "</h5>
                                                     <p class=\"banner-category-desc\">";
-            // line 346
+            // line 362
             echo twig_escape_filter($this->env, $this->getAttribute($this->getAttribute($context["c"], "zone", array()), "nom", array()), "html", null, true);
             echo "</p>
                                                    
                                                     </div>
                                                 </div>
                                             </div>
-                                        </div>
+                                      
                                                     
                                                     
                                         ";
@@ -685,816 +715,18 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['c'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 355
-        echo "                                    </div>
+        // line 371
+        echo "                                          </div>
+                                    </div>
                                    ";
-        // line 370
+        // line 387
         echo "                                       <div class=\"gap\"></div>
-                                    <div class=\"row\" data-gutter=\"15\">
-                                        <div class=\"col-md-6\">
-                                            <div class=\"banner banner-o-hid\" style=\"background-image:url(img/landscape-scotland-nature_380x220.jpg);\">
-                                                <a class=\"banner-link\" href=\"#\"></a>
-                                                <div class=\"banner-caption-left\">
-                                                    <h5 class=\"banner-title\">Discover The Mountains</h5>
-                                                    <p class=\"banner-desc\">Pro Backpacks 70% Off.</p>
-                                                    <p class=\"banner-shop-now\">Shop Now <i class=\"fa fa-caret-right\"></i>
-                                                    </p>
-                                                </div>
-                                                <img class=\"banner-img\" src=\"";
-        // line 381
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_banner/16.png"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" style=\"bottom: -68px; right: -32px; width: 200px;\" />
-                                            </div>
+                                   
+                                            
                                         </div>
-                                        <div class=\"col-md-6\">
-                                            <div class=\"banner banner-o-hid\" style=\"background-image:url(img/man_back_560x200.jpg);\">
-                                                <a class=\"banner-link\" href=\"#\"></a>
-                                                <div class=\"banner-caption-left banner-caption-dark\">
-                                                    <h5 class=\"banner-title\">Winter is Comming</h5>
-                                                    <p class=\"banner-desc\">Outwear Collection</p>
-                                                    <p class=\"banner-shop-now\">Shop Now <i class=\"fa fa-caret-right\"></i>
-                                                    </p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"gap\"></div>
-                                    <div class=\"row\" data-gutter=\"60\">
-                                        <div class=\"col-md-6\">
-                                            <h3 class=\"widget-title\">Recentrly Viewed</h3>
-                                            <div class=\"owl-carousel owl-loaded owl-nav-out\" data-options='{\"items\":3,\"loop\":true,\"nav\":true}'>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 404
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/home_tech/6.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Black 1000-Watt 6-Quart Electric Pressure Cooker Brushed Stainless and Matte 603</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$104</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 429
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/31.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Apple iPhone 5c - 16GB - GSM Factory Unlocked White Blue Green Pink Yellow</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$144</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 454
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/sports/1.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Barnett 78649 Recruit Youth 100# Crossbow Package With Red Dot Sight Pink</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$122</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 479
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_running_shoes/4.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">ASICS Women's Gel-Noosa Tri 9 Running Shoe Black/Neon Coral/Green</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$50</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 504
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/man_fashion/4.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Drifire Lightweight Tubular Short Sleeve Shirt - Made in USA</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$67</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 529
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/man_fashion/6.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Ray Ban RB 3025 112/19 Green Flash Lens Unisex 58mm Aviator Sunglasses</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-old\">\$148</span><span class=\"product-caption-price-new\">\$134</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 554
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/man_fashion/7.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Hanes Ultimate Cotton&reg; Fleece Full-Zip Adult Hoodie style F280</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$60</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 579
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_running_shoes/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$100</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 604
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/34.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Samsung Galaxy Note 4 IV 4G FACTORY UNLOCKED Black or White</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-old\">\$74</span><span class=\"product-caption-price-new\">\$45</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 629
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_bags/5.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Dooney & Bourke Pebble Grain Hobo</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$120</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"col-md-6\">
-                                            <h3 class=\"widget-title\">Based on Your Browsing History</h3>
-                                            <div class=\"owl-carousel owl-loaded owl-nav-out\" data-options='{\"items\":3,\"loop\":true,\"nav\":true}'>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 659
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/home_tech/3.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">iRobot BRAAVA 320 Floor Sweeping/Mopping Robot Cleaner - White</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$143</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 684
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/sports/1.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Barnett 78649 Recruit Youth 100# Crossbow Package With Red Dot Sight Pink</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$58</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 709
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_bags/3.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Dooney & Bourke Pebble Grain Lexington</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$125</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 734
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/sports/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">New 26\" Folding 6 Speed Mountain Bike Bicycle Shimano School Sport Black</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$64</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 759
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_running_shoes/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$114</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 784
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_dress/1.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Jessica Simpson Women's Single Breasted Belted Peacoat Jacket Coat</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-old\">\$68</span><span class=\"product-caption-price-new\">\$48</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 809
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/home_tech/5.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Hamilton Beach 49996 FlexBrew Single-Serve Coffeemaker with Removable Reservoir</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$147</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 834
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/man_fashion/6.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Ray Ban RB 3025 112/19 Green Flash Lens Unisex 58mm Aviator Sunglasses</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-old\">\$89</span><span class=\"product-caption-price-new\">\$27</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 859
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/man_fashion/8.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">FootJoy Contour Casual Spikeless Golf Shoes Black Mens Closeout 54284 New</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$144</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class=\"owl-item\">
-                                                    <div class=\"product product-sm owl-item-slide\">
-                                                        <div class=\"product-img-wrap\">
-                                                            <img class=\"product-img\" src=\"";
-        // line 884
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/woman_dress/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                        </div>
-                                                        <a class=\"product-link\" href=\"#\"></a>
-                                                        <div class=\"product-caption\">
-                                                            <ul class=\"product-caption-rating\">
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                                <li><i class=\"fa fa-star\"></i>
-                                                                </li>
-                                                            </ul>
-                                                            <h5 class=\"product-caption-title\">Hanes Women's Relaxed Fit Jersey ComfortSoft&reg; Crewneck T-Shirt style 5680</h5>
-                                                            <div class=\"product-caption-price\"><span class=\"product-caption-price-new\">\$116</span>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"gap\"></div>
-                                    <h3 class=\"widget-title\">Latest Reviews</h3>
-                                    <div class=\"owl-carousel owl-loaded owl-nav-out\" data-options='{\"items\":5,\"loop\":true,\"nav\":true}'>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 915
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/gamer_chick_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Blake Hardacre</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Suscipit mattis lectus habitant enim taciti gravida libero tellus posuere sit donec sem</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 934
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/1.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">Nikon D5200 24.1 MP Digital SLR Camera - Black (Kit w/ 18-55 VR Lens)</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 942
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/andrea_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Bernadette Cornish</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Ligula dignissim cursus aliquam volutpat aptent adipiscing aptent porta facilisi montes enim urna</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 961
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">Black 1000-Watt 6-Quart Electric Pressure Cooker Brushed Stainless and Matte 603</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 969
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/afro_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Carol Blevins</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Non purus aenean tempus sed dapibus sed natoque massa pulvinar porttitor semper fames</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 988
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/3.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">Vera Bradley Vera Tote Bag</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 996
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/luca_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Alison Mackenzie</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Arcu odio nam mauris enim elit molestie phasellus parturient odio leo penatibus condimentum</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 1015
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/4.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">Google Nexus 6 XT1103 4G LTE - 32GB - Blue Factory Unlocked GSM</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 1023
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/bubbles_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Brandon Burgess</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Cras at nulla ante vitae mollis tellus amet commodo facilisis est ac nisi</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 1042
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/6.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">New Authentic Gucci Patent Leather Open Toe Platform Pump,Gren, 309984 3125</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class=\"owl-item\">
-                                            <div class=\"product-review-thumb owl-item-slide\">
-                                                <header class=\"product-review-thumb-header\">
-                                                    <img class=\"product-review-thumb-reviewer-img\" src=\"";
-        // line 1050
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/amaze_50x50.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <div class=\"product-review-thumb-header-side\">
-                                                        <ul class=\"product-review-thumb-rating\">
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                            <li class=\"rated\"><i class=\"fa fa-star\"></i>
-                                                            </li>
-                                                        </ul>
-                                                        <h5 class=\"product-review-thumb-reviewer-name\">Carol Blevins</h5>
-                                                    </div>
-                                                </header>
-                                                <p class=\"product-review-thumb-body\">Ad dignissim per eu velit rhoncus nisi morbi orci adipiscing elit sapien interdum</p><a class=\"product-review-thumb-link\" href=\"#\">Full Review</a>
-                                                <div class=\"product-review-thumb-product\">
-                                                    <img class=\"product-review-thumb-product-img\" src=\"";
-        // line 1069
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_product/xs/5.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                                    <h5 class=\"product-review-thumb-product-title\"><a href=\"#\">Apple iPhone 5s 16GB Factory Unlocked Smartphone Space Gray / Silver / Gold</a></h5>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class=\"gap\"></div>
-                                </div>
+                                     
+                                 
+                              
 
                                 <footer class=\"main-footer\">
                                     <div class=\"container\">
@@ -1529,7 +761,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                         <div class=\"form-group\">
                                                             <label></label>
                                                             <a href=\"";
-        // line 1110
+        // line 427
         echo $this->env->getExtension('routing')->getPath("application_mail_sendMail");
         echo "\" <input type =\"submit\" value =\"send\" class=\"btn btn-lg btn-ghost btn-blue\"/>Contact Us</a>
 
@@ -1560,10 +792,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                             <li><a href=\"#\">Payments & Refunds</a>
                                             </li>
                                         </ul>
-                                        <img class=\"main-footer-img\" src=\"";
-        // line 1139
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_footer2.png"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
+                                      
                                     </div>
                                 </footer>
                                 <div class=\"copyright-area\">
@@ -1576,37 +805,37 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                                 <ul class=\"payment-icons-list\">
                                                     <li>
                                                         <img src=\"";
-        // line 1151
+        // line 468
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/visa-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Visa\" />
                                                     </li>
                                                     <li>
                                                         <img src=\"";
-        // line 1154
+        // line 471
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/mastercard-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Mastercard\" />
                                                     </li>
                                                     <li>
                                                         <img src=\"";
-        // line 1157
+        // line 474
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/paypal-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Paypal\" />
                                                     </li>
                                                     <li>
                                                         <img src=\"";
-        // line 1160
+        // line 477
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/visa-electron-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Visa-electron\" />
                                                     </li>
                                                     <li>
                                                         <img src=\"";
-        // line 1163
+        // line 480
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/maestro-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Maestro\" />
                                                     </li>
                                                     <li>
                                                         <img src=\"";
-        // line 1166
+        // line 483
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/payment/discover-straight-32px.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Pay with Discover\" />
                                                     </li>
@@ -1617,45 +846,45 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
                                 </div>
                                 </div>
                                 <script src=\"";
-        // line 1174
+        // line 491
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1175
+        // line 492
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1176
+        // line 493
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/icheck.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1177
+        // line 494
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/ionrangeslider.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1178
+        // line 495
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jqzoom.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1179
+        // line 496
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/card-payment.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1180
+        // line 497
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/owl-carousel.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1181
+        // line 498
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/magnific.js"), "html", null, true);
         echo "\"></script>
                                 <script src=\"";
-        // line 1182
+        // line 499
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/custom.js"), "html", null, true);
         echo "\"></script>
 
 
                                 <script src=\"";
-        // line 1185
+        // line 502
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/switcher.js"), "html", null, true);
         echo "\"></script>
 <p id=\"demo\"></p>
@@ -1682,7 +911,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 
     public function getDebugInfo()
     {
-        return array (  1659 => 1185,  1653 => 1182,  1649 => 1181,  1645 => 1180,  1641 => 1179,  1637 => 1178,  1633 => 1177,  1629 => 1176,  1625 => 1175,  1621 => 1174,  1610 => 1166,  1604 => 1163,  1598 => 1160,  1592 => 1157,  1586 => 1154,  1580 => 1151,  1565 => 1139,  1533 => 1110,  1489 => 1069,  1467 => 1050,  1456 => 1042,  1434 => 1023,  1423 => 1015,  1401 => 996,  1390 => 988,  1368 => 969,  1357 => 961,  1335 => 942,  1324 => 934,  1302 => 915,  1268 => 884,  1240 => 859,  1212 => 834,  1184 => 809,  1156 => 784,  1128 => 759,  1100 => 734,  1072 => 709,  1044 => 684,  1016 => 659,  983 => 629,  955 => 604,  927 => 579,  899 => 554,  871 => 529,  843 => 504,  815 => 479,  787 => 454,  759 => 429,  731 => 404,  705 => 381,  692 => 370,  689 => 355,  674 => 346,  670 => 345,  663 => 341,  657 => 337,  653 => 336,  646 => 331,  630 => 323,  626 => 322,  618 => 317,  612 => 313,  608 => 312,  591 => 298,  577 => 287,  563 => 276,  544 => 260,  538 => 257,  530 => 252,  524 => 249,  518 => 246,  512 => 243,  507 => 241,  502 => 239,  496 => 236,  490 => 233,  484 => 230,  465 => 213,  460 => 210,  452 => 205,  448 => 204,  444 => 202,  442 => 201,  421 => 183,  365 => 129,  362 => 128,  359 => 127,  353 => 124,  349 => 123,  344 => 122,  342 => 121,  317 => 101,  311 => 100,  305 => 99,  299 => 98,  293 => 97,  287 => 96,  281 => 95,  275 => 94,  269 => 93,  263 => 92,  257 => 91,  251 => 90,  243 => 85,  239 => 84,  235 => 83,  231 => 82,  227 => 81,  223 => 80,  219 => 79,  215 => 78,  211 => 77,  207 => 76,  203 => 75,  199 => 74,  187 => 65,  183 => 64,  179 => 63,  175 => 62,  171 => 61,  167 => 60,  163 => 59,  159 => 58,  155 => 57,  151 => 56,  147 => 55,  143 => 54,  139 => 53,  135 => 52,  131 => 51,  116 => 39,  112 => 38,  108 => 37,  104 => 36,  100 => 35,  96 => 34,  92 => 33,  88 => 32,  84 => 31,  80 => 30,  76 => 29,  72 => 28,  68 => 27,  64 => 26,  60 => 25,  56 => 24,  52 => 23,  48 => 22,  44 => 21,  40 => 20,  19 => 1,);
+        return array (  888 => 502,  882 => 499,  878 => 498,  874 => 497,  870 => 496,  866 => 495,  862 => 494,  858 => 493,  854 => 492,  850 => 491,  839 => 483,  833 => 480,  827 => 477,  821 => 474,  815 => 471,  809 => 468,  765 => 427,  723 => 387,  719 => 371,  704 => 362,  700 => 361,  693 => 357,  687 => 353,  683 => 352,  676 => 347,  658 => 339,  654 => 338,  646 => 333,  640 => 329,  636 => 328,  619 => 314,  605 => 303,  591 => 292,  572 => 276,  566 => 273,  558 => 268,  552 => 265,  546 => 262,  540 => 259,  535 => 257,  530 => 255,  524 => 252,  518 => 249,  512 => 246,  491 => 227,  485 => 223,  479 => 220,  470 => 214,  466 => 213,  462 => 211,  460 => 210,  438 => 191,  432 => 188,  425 => 184,  421 => 183,  366 => 130,  363 => 129,  360 => 128,  353 => 124,  349 => 123,  344 => 122,  342 => 121,  317 => 101,  311 => 100,  305 => 99,  299 => 98,  293 => 97,  287 => 96,  281 => 95,  275 => 94,  269 => 93,  263 => 92,  257 => 91,  251 => 90,  243 => 85,  239 => 84,  235 => 83,  231 => 82,  227 => 81,  223 => 80,  219 => 79,  215 => 78,  211 => 77,  207 => 76,  203 => 75,  199 => 74,  187 => 65,  183 => 64,  179 => 63,  175 => 62,  171 => 61,  167 => 60,  163 => 59,  159 => 58,  155 => 57,  151 => 56,  147 => 55,  143 => 54,  139 => 53,  135 => 52,  131 => 51,  116 => 39,  112 => 38,  108 => 37,  104 => 36,  100 => 35,  96 => 34,  92 => 33,  88 => 32,  84 => 31,  80 => 30,  76 => 29,  72 => 28,  68 => 27,  64 => 26,  60 => 25,  56 => 24,  52 => 23,  48 => 22,  44 => 21,  40 => 20,  19 => 1,);
     }
 }
 /* */
@@ -1810,6 +1039,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                     <a href="{{ path('fos_user_security_logout') }}">*/
 /*                         {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
 /*                     </a>*/
+/*                         */
 /*                 {% else %}*/
 /*                     {% render controller("FOSUserBundle:Security:login") %}*/
 /*                 {% endif %}*/
@@ -1866,9 +1096,17 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                     <div class="navbar-header">*/
 /*                         <button class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>*/
 /*                         </button>*/
-/*                         <a class="navbar-brand" href="index.html">*/
+/*                         <a class="navbar-brand" href="{{path('ecommerce_homepage')}}">*/
 /*                             <img src="{{ asset('img/LOGOAFD.png')}}" alt="Image Alternative text" title="Image Title" />*/
 /*                         </a>*/
+/*                          </li>*/
+/*                         */
+/*                                   <a class="navbar-brand" href="{{ path('service_offre') }}">Services</a>*/
+/*                                 */
+/*                                 */
+/*                                 <a class="navbar-brand" href="{{ path('produit_affichePForAllUsers') }}">Produits</a>*/
+/*                                 */
+/*                             */
 /*                     </div>*/
 /*                     <div class="rel">*/
 /*   */
@@ -1891,18 +1129,25 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                                     <a href="{{ path('fos_user_security_logout') }}">*/
 /*                                         {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}*/
 /*                                     </a>*/
+/*                                     */
 /* */
 /*                                 </li>*/
+/*                                  <li class="dropdown yamm-fw">*/
+/*                                 <a href="{{ path('sonata_user_profile_show') }}">Profile</a>*/
+/*                                 */
 /*                             {% else %}*/
 /*                                 <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">*/
 /*                                         Bonjour, Connectez-vous</a>*/
+/*                                */
 /*                                     {% endif %}*/
 /*                             <li class="dropdown">*/
 /*                                 <a class="fa fa-shopping-cart" href="shopping-cart.html"></a>*/
 /*                                 <ul class="dropdown-menu dropdown-menu-shipping-cart">*/
 /*                                     <li>*/
 /*                                 </ul>*/
+/*                                 */
 /*                                 </div>*/
+/*                             */
 /*                                 </div>*/
 /*                                 </nav>*/
 /* */
@@ -2007,7 +1252,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                                                 <div class="product-caption">*/
 /*                                                   */
 /*                                                     <h5 class="product-caption-title">{{p.nomP}}</h5>*/
-/*                                                     <div class="product-caption-price"><span class="product-caption-price-old">{{p.prix}}</span><span class="product-caption-price-new">{{p.tva}}DT</span>*/
+/*                                                     <div class="product-caption-price"><span class="product-caption-price-old">{{p.prix}}</span><span class="product-caption-price-new"> {% set prix= p.prix-p.reduction  %} {{prix}}DT</span>*/
 /*                                                     </div>*/
 /*                                                 </div>*/
 /*                                             </div>*/
@@ -2035,10 +1280,11 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                                                     </div>*/
 /*                                                 </div>*/
 /*                                             </div>*/
-/*                                         </div>*/
+/*                                       */
 /*                                                     */
 /*                                                     */
 /*                                         {% endfor %}*/
+/*                                           </div>*/
 /*                                     </div>*/
 /*                                    {# <div class="row" data-gutter="15">*/
 /*                                         {% for c in services %}*/
@@ -2055,712 +1301,12 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                                         {% endfor %}*/
 /*                                     </div>#}*/
 /*                                        <div class="gap"></div>*/
-/*                                     <div class="row" data-gutter="15">*/
-/*                                         <div class="col-md-6">*/
-/*                                             <div class="banner banner-o-hid" style="background-image:url(img/landscape-scotland-nature_380x220.jpg);">*/
-/*                                                 <a class="banner-link" href="#"></a>*/
-/*                                                 <div class="banner-caption-left">*/
-/*                                                     <h5 class="banner-title">Discover The Mountains</h5>*/
-/*                                                     <p class="banner-desc">Pro Backpacks 70% Off.</p>*/
-/*                                                     <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>*/
-/*                                                     </p>*/
-/*                                                 </div>*/
-/*                                                 <img class="banner-img" src="{{ asset('img/test_banner/16.png')}}" alt="Image Alternative text" title="Image Title" style="bottom: -68px; right: -32px; width: 200px;" />*/
-/*                                             </div>*/
+/*                                    */
+/*                                             */
 /*                                         </div>*/
-/*                                         <div class="col-md-6">*/
-/*                                             <div class="banner banner-o-hid" style="background-image:url(img/man_back_560x200.jpg);">*/
-/*                                                 <a class="banner-link" href="#"></a>*/
-/*                                                 <div class="banner-caption-left banner-caption-dark">*/
-/*                                                     <h5 class="banner-title">Winter is Comming</h5>*/
-/*                                                     <p class="banner-desc">Outwear Collection</p>*/
-/*                                                     <p class="banner-shop-now">Shop Now <i class="fa fa-caret-right"></i>*/
-/*                                                     </p>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                     </div>*/
-/*                                     <div class="gap"></div>*/
-/*                                     <div class="row" data-gutter="60">*/
-/*                                         <div class="col-md-6">*/
-/*                                             <h3 class="widget-title">Recentrly Viewed</h3>*/
-/*                                             <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":3,"loop":true,"nav":true}'>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/home_tech/6.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Black 1000-Watt 6-Quart Electric Pressure Cooker Brushed Stainless and Matte 603</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$104</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/31.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Apple iPhone 5c - 16GB - GSM Factory Unlocked White Blue Green Pink Yellow</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$144</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/sports/1.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Barnett 78649 Recruit Youth 100# Crossbow Package With Red Dot Sight Pink</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$122</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_running_shoes/4.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">ASICS Women's Gel-Noosa Tri 9 Running Shoe Black/Neon Coral/Green</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$50</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/man_fashion/4.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Drifire Lightweight Tubular Short Sleeve Shirt - Made in USA</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$67</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/man_fashion/6.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Ray Ban RB 3025 112/19 Green Flash Lens Unisex 58mm Aviator Sunglasses</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-old">$148</span><span class="product-caption-price-new">$134</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/man_fashion/7.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Hanes Ultimate Cotton&reg; Fleece Full-Zip Adult Hoodie style F280</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$60</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_running_shoes/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$100</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/34.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Samsung Galaxy Note 4 IV 4G FACTORY UNLOCKED Black or White</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-old">$74</span><span class="product-caption-price-new">$45</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_bags/5.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Hobo</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$120</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="col-md-6">*/
-/*                                             <h3 class="widget-title">Based on Your Browsing History</h3>*/
-/*                                             <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":3,"loop":true,"nav":true}'>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/home_tech/3.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">iRobot BRAAVA 320 Floor Sweeping/Mopping Robot Cleaner - White</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$143</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/sports/1.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Barnett 78649 Recruit Youth 100# Crossbow Package With Red Dot Sight Pink</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$58</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_bags/3.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Dooney & Bourke Pebble Grain Lexington</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$125</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/sports/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">New 26" Folding 6 Speed Mountain Bike Bicycle Shimano School Sport Black</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$64</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_running_shoes/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">ASICS Women's GEL-Equation 7 Running Shoes T3F6N</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$114</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_dress/1.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Jessica Simpson Women's Single Breasted Belted Peacoat Jacket Coat</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-old">$68</span><span class="product-caption-price-new">$48</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/home_tech/5.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Hamilton Beach 49996 FlexBrew Single-Serve Coffeemaker with Removable Reservoir</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$147</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/man_fashion/6.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Ray Ban RB 3025 112/19 Green Flash Lens Unisex 58mm Aviator Sunglasses</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-old">$89</span><span class="product-caption-price-new">$27</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/man_fashion/8.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">FootJoy Contour Casual Spikeless Golf Shoes Black Mens Closeout 54284 New</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$144</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                                 <div class="owl-item">*/
-/*                                                     <div class="product product-sm owl-item-slide">*/
-/*                                                         <div class="product-img-wrap">*/
-/*                                                             <img class="product-img" src="{{ asset('img/test_product/woman_dress/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                         </div>*/
-/*                                                         <a class="product-link" href="#"></a>*/
-/*                                                         <div class="product-caption">*/
-/*                                                             <ul class="product-caption-rating">*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                                 <li><i class="fa fa-star"></i>*/
-/*                                                                 </li>*/
-/*                                                             </ul>*/
-/*                                                             <h5 class="product-caption-title">Hanes Women's Relaxed Fit Jersey ComfortSoft&reg; Crewneck T-Shirt style 5680</h5>*/
-/*                                                             <div class="product-caption-price"><span class="product-caption-price-new">$116</span>*/
-/*                                                             </div>*/
-/*                                                         </div>*/
-/*                                                     </div>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                     </div>*/
-/*                                     <div class="gap"></div>*/
-/*                                     <h3 class="widget-title">Latest Reviews</h3>*/
-/*                                     <div class="owl-carousel owl-loaded owl-nav-out" data-options='{"items":5,"loop":true,"nav":true}'>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/gamer_chick_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Blake Hardacre</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Suscipit mattis lectus habitant enim taciti gravida libero tellus posuere sit donec sem</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/1.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera - Black (Kit w/ 18-55 VR Lens)</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/andrea_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Bernadette Cornish</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Ligula dignissim cursus aliquam volutpat aptent adipiscing aptent porta facilisi montes enim urna</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">Black 1000-Watt 6-Quart Electric Pressure Cooker Brushed Stainless and Matte 603</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/afro_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Carol Blevins</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Non purus aenean tempus sed dapibus sed natoque massa pulvinar porttitor semper fames</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/3.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">Vera Bradley Vera Tote Bag</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/luca_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Alison Mackenzie</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Arcu odio nam mauris enim elit molestie phasellus parturient odio leo penatibus condimentum</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/4.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">Google Nexus 6 XT1103 4G LTE - 32GB - Blue Factory Unlocked GSM</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/bubbles_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Brandon Burgess</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Cras at nulla ante vitae mollis tellus amet commodo facilisis est ac nisi</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/6.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">New Authentic Gucci Patent Leather Open Toe Platform Pump,Gren, 309984 3125</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                         <div class="owl-item">*/
-/*                                             <div class="product-review-thumb owl-item-slide">*/
-/*                                                 <header class="product-review-thumb-header">*/
-/*                                                     <img class="product-review-thumb-reviewer-img" src="{{ asset('img/amaze_50x50.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <div class="product-review-thumb-header-side">*/
-/*                                                         <ul class="product-review-thumb-rating">*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                             <li class="rated"><i class="fa fa-star"></i>*/
-/*                                                             </li>*/
-/*                                                         </ul>*/
-/*                                                         <h5 class="product-review-thumb-reviewer-name">Carol Blevins</h5>*/
-/*                                                     </div>*/
-/*                                                 </header>*/
-/*                                                 <p class="product-review-thumb-body">Ad dignissim per eu velit rhoncus nisi morbi orci adipiscing elit sapien interdum</p><a class="product-review-thumb-link" href="#">Full Review</a>*/
-/*                                                 <div class="product-review-thumb-product">*/
-/*                                                     <img class="product-review-thumb-product-img" src="{{ asset('img/test_product/xs/5.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                                     <h5 class="product-review-thumb-product-title"><a href="#">Apple iPhone 5s 16GB Factory Unlocked Smartphone Space Gray / Silver / Gold</a></h5>*/
-/*                                                 </div>*/
-/*                                             </div>*/
-/*                                         </div>*/
-/*                                     </div>*/
-/*                                     <div class="gap"></div>*/
-/*                                 </div>*/
+/*                                      */
+/*                                  */
+/*                               */
 /* */
 /*                                 <footer class="main-footer">*/
 /*                                     <div class="container">*/
@@ -2823,7 +1369,7 @@ class __TwigTemplate_d81a7aa12a1b3de5e6cd6e89df0d6aeb66a6fce47a3c9e41183fee6efb0
 /*                                             <li><a href="#">Payments & Refunds</a>*/
 /*                                             </li>*/
 /*                                         </ul>*/
-/*                                         <img class="main-footer-img" src="{{ asset('img/test_footer2.png')}}" alt="Image Alternative text" title="Image Title" />*/
+/*                                       */
 /*                                     </div>*/
 /*                                 </footer>*/
 /*                                 <div class="copyright-area">*/

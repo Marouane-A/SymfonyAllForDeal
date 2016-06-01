@@ -251,11 +251,11 @@ class __TwigTemplate_d534df166c87379d9e9eb10f2028a3f7c3dfb4e646d5eca38525d7e6faf
     }
 
     // line 1
-    public function getattributes($__attributes__ = null)
+    public function getattributes($__attributes__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "attributes" => $__attributes__,
-            "varargs" => func_num_args() > 1 ? array_slice(func_get_args(), 1) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();

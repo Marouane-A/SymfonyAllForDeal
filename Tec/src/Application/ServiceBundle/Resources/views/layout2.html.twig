@@ -114,7 +114,7 @@
                 </div>
             </div>
             <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">
-                <h3 class="widget-title">Member Login</h3>
+                <h3 class="widget-title">connexion</h3>
                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                     {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
                     <a href="{{ path('fos_user_security_logout') }}">
@@ -125,14 +125,14 @@
                 {% endif %}
             </div>
             <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-account-dialog">
-                <h3 class="widget-title">Create TheBox Account</h3>
-                <p>Ready to get best offers? Let's get started!</p>
+                <h3 class="widget-title">Créez votre compte</h3>
+                
                 {% render controller("FOSUserBundle:Registration:register") %}
                 <hr />
 
                 <div class="gap gap-small"></div>
                 <ul class="list-inline">
-                    <li><a href="#nav-login-dialog" class="popup-text">Already Memeber</a>
+                    <li><a href="#nav-login-dialog" class="popup-text">Dejà inscrit !</a>
                     </li>
                 </ul>
             </div>
@@ -154,8 +154,8 @@
                     <div class="navbar-header">
                         <button  class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span classc="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="index.html">
-                            <img src="{{ asset('img/logo-w.png')}}" alt="Image Alternative text" title="Image Title" />
+                        <a class="navbar-brand" href="{{path('ecommerce_homepage')}}">
+                            <img src="{{ asset('img/LOGOAFD.png')}}" alt="Image Alternative text" title="Image Title" />
                         </a>
                     </div>
                     <div class="collapse navbar-collapse" id="main-nav-collapse">
@@ -292,10 +292,12 @@
                             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
                             <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">En ligne</a>
                             </li>
-                            
+                            <li>
+                             <a href="{{ path('sonata_user_profile_show') }}">Profile</a>
+                            </li>
                             
                             {% else %}
-                                 <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Connection</a>
+                                 <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">connexion</a>
                             </li>
                             <li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Inscription</a>
                             </li>
@@ -303,50 +305,7 @@
                             <li class="dropdown">
                                 <a class="fa fa-shopping-cart" href="shopping-cart.html"></a>
                                 <ul class="dropdown-menu dropdown-menu-shipping-cart">
-                                    <li>
-                                        <a class="dropdown-menu-shipping-cart-img" href="#">
-                                            <img src="{{ asset('img/cart/1.jpg')}}" alt="Image Alternative text" title="Image Title" />
-                                        </a>
-                                        <div class="dropdown-menu-shipping-cart-inner">
-                                            <p class="dropdown-menu-shipping-cart-price">$39</p>
-                                            <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-menu-shipping-cart-img" href="#">
-                                            <img src="{{ asset('img/cart/2.jpg')}}" alt="Image Alternative text" title="Image Title" />
-                                        </a>
-                                        <div class="dropdown-menu-shipping-cart-inner">
-                                            <p class="dropdown-menu-shipping-cart-price">$41</p>
-                                            <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-menu-shipping-cart-img" href="#">
-                                            <img src="{{ asset('img/cart/3.jpg')}}" alt="Image Alternative text" title="Image Title" />
-                                        </a>
-                                        <div class="dropdown-menu-shipping-cart-inner">
-                                            <p class="dropdown-menu-shipping-cart-price">$93</p>
-                                            <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-menu-shipping-cart-img" href="#">
-                                            <img src="{{ asset('img/cart/4.jpg')}}" alt="Image Alternative text" title="Image Title" />
-                                        </a>
-                                        <div class="dropdown-menu-shipping-cart-inner">
-                                            <p class="dropdown-menu-shipping-cart-price">$82</p>
-                                            <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class="dropdown-menu-shipping-cart-total">Total: $150</p>
-                                        <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>
-                                    </li>
+                                 
                                 </ul>
                             </li>
                         </ul>
@@ -401,28 +360,9 @@
                         </div>
                     </div>
                     <ul class="main-footer-links-list">
-                        <li><a href="#">About Us</a>
-                        </li>
-                        <li><a href="#">Jobs</a>
-                        </li>
-                        <li><a href="#">Legal</a>
-                        </li>
-                        <li><a href="#">Support & Customer Service</a>
-                        </li>
-                        <li><a href="#">Blog</a>
-                        </li>
-                        <li><a href="#">Privacy</a>
-                        </li>
-                        <li><a href="#">Terms</a>
-                        </li>
-                        <li><a href="#">Press</a>
-                        </li>
-                        <li><a href="#">Shipping</a>
-                        </li>
-                        <li><a href="#">Payments & Refunds</a>
-                        </li>
+                        
                     </ul>
-                    <img class="main-footer-img" src="{{ asset('img/test_footer2.png')}}" alt="Image Alternative text" title="Image Title" />
+                   
                 </div>
             </footer>
             <div class="copyright-area">

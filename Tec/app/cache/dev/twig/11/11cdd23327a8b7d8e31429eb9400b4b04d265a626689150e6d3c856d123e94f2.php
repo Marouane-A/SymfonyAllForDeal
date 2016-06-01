@@ -340,7 +340,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
                 </div>
             </div>
             <div class=\"mfp-with-anim mfp-hide mfp-dialog clearfix\" id=\"nav-login-dialog\">
-                <h3 class=\"widget-title\">Member Login</h3>
+                <h3 class=\"widget-title\">connexion</h3>
                 ";
         // line 118
         if ($this->env->getExtension('security')->isGranted("IS_AUTHENTICATED_REMEMBERED")) {
@@ -368,8 +368,8 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
         // line 126
         echo "            </div>
             <div class=\"mfp-with-anim mfp-hide mfp-dialog clearfix\" id=\"nav-account-dialog\">
-                <h3 class=\"widget-title\">Create TheBox Account</h3>
-                <p>Ready to get best offers? Let's get started!</p>
+                <h3 class=\"widget-title\">Créez votre compte</h3>
+                
                 ";
         // line 130
         echo $this->env->getExtension('actions')->renderUri($this->env->getExtension('http_kernel')->controller("FOSUserBundle:Registration:register"), array());
@@ -378,7 +378,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 
                 <div class=\"gap gap-small\"></div>
                 <ul class=\"list-inline\">
-                    <li><a href=\"#nav-login-dialog\" class=\"popup-text\">Already Memeber</a>
+                    <li><a href=\"#nav-login-dialog\" class=\"popup-text\">Dejà inscrit !</a>
                     </li>
                 </ul>
             </div>
@@ -400,10 +400,13 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
                     <div class=\"navbar-header\">
                         <button  class=\"navbar-toggle collapsed\" type=\"button\" data-toggle=\"collapse\" data-target=\"#main-nav-collapse\" area_expanded=\"false\"><span class=\"sr-only\">Main Menu</span><span classc=\"icon-bar\"></span><span class=\"icon-bar\"></span><span class=\"icon-bar\"></span>
                         </button>
-                        <a class=\"navbar-brand\" href=\"index.html\">
+                        <a class=\"navbar-brand\" href=\"";
+        // line 157
+        echo $this->env->getExtension('routing')->getPath("ecommerce_homepage");
+        echo "\">
                             <img src=\"";
         // line 158
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/logo-w.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/LOGOAFD.png"), "html", null, true);
         echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
                         </a>
                     </div>
@@ -634,77 +637,27 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
             // line 293
             echo "                            <li><a href=\"#nav-login-dialog\" data-effect=\"mfp-move-from-top\" class=\"popup-text\">En ligne</a>
                             </li>
-                            
+                            <li>
+                             <a href=\"";
+            // line 296
+            echo $this->env->getExtension('routing')->getPath("sonata_user_profile_show");
+            echo "\">Profile</a>
+                            </li>
                             
                             ";
         } else {
-            // line 298
-            echo "                                 <li><a href=\"#nav-login-dialog\" data-effect=\"mfp-move-from-top\" class=\"popup-text\">Connection</a>
+            // line 300
+            echo "                                 <li><a href=\"#nav-login-dialog\" data-effect=\"mfp-move-from-top\" class=\"popup-text\">connexion</a>
                             </li>
                             <li><a href=\"#nav-account-dialog\" data-effect=\"mfp-move-from-top\" class=\"popup-text\">Inscription</a>
                             </li>
                                 ";
         }
-        // line 303
+        // line 305
         echo "                            <li class=\"dropdown\">
                                 <a class=\"fa fa-shopping-cart\" href=\"shopping-cart.html\"></a>
                                 <ul class=\"dropdown-menu dropdown-menu-shipping-cart\">
-                                    <li>
-                                        <a class=\"dropdown-menu-shipping-cart-img\" href=\"#\">
-                                            <img src=\"";
-        // line 308
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/cart/1.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                        </a>
-                                        <div class=\"dropdown-menu-shipping-cart-inner\">
-                                            <p class=\"dropdown-menu-shipping-cart-price\">\$39</p>
-                                            <p class=\"dropdown-menu-shipping-cart-item\"><a href=\"#\">Gucci Patent Leather Open Toe Platform</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class=\"dropdown-menu-shipping-cart-img\" href=\"#\">
-                                            <img src=\"";
-        // line 318
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/cart/2.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                        </a>
-                                        <div class=\"dropdown-menu-shipping-cart-inner\">
-                                            <p class=\"dropdown-menu-shipping-cart-price\">\$41</p>
-                                            <p class=\"dropdown-menu-shipping-cart-item\"><a href=\"#\">Nikon D5200 24.1 MP Digital SLR Camera</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class=\"dropdown-menu-shipping-cart-img\" href=\"#\">
-                                            <img src=\"";
-        // line 328
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/cart/3.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                        </a>
-                                        <div class=\"dropdown-menu-shipping-cart-inner\">
-                                            <p class=\"dropdown-menu-shipping-cart-price\">\$93</p>
-                                            <p class=\"dropdown-menu-shipping-cart-item\"><a href=\"#\">Apple 11.6\" MacBook Air Notebook </a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a class=\"dropdown-menu-shipping-cart-img\" href=\"#\">
-                                            <img src=\"";
-        // line 338
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/cart/4.jpg"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
-                                        </a>
-                                        <div class=\"dropdown-menu-shipping-cart-inner\">
-                                            <p class=\"dropdown-menu-shipping-cart-price\">\$82</p>
-                                            <p class=\"dropdown-menu-shipping-cart-item\"><a href=\"#\">Fossil Women's Original Boyfriend</a>
-                                            </p>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <p class=\"dropdown-menu-shipping-cart-total\">Total: \$150</p>
-                                        <button class=\"dropdown-menu-shipping-cart-checkout btn btn-primary\">Checkout</button>
-                                    </li>
+                                 
                                 </ul>
                             </li>
                         </ul>
@@ -718,9 +671,9 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
             <div class=\"container\">
 
                 ";
-        // line 362
+        // line 321
         $this->displayBlock('t', $context, $blocks);
-        // line 365
+        // line 324
         echo "            </div>
 
             <footer class=\"main-footer\">
@@ -755,7 +708,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
                              <div class=\"form-group\">
                                     <label></label>
                                     <a href=\"";
-        // line 398
+        // line 357
         echo $this->env->getExtension('routing')->getPath("application_mail_sendMail");
         echo "\" <input type =\"submit\" value =\"send\" class=\"btn btn-lg btn-ghost btn-blue\"/>Contact Us</a>
                                    
@@ -763,31 +716,9 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
                         </div>
                     </div>
                     <ul class=\"main-footer-links-list\">
-                        <li><a href=\"#\">About Us</a>
-                        </li>
-                        <li><a href=\"#\">Jobs</a>
-                        </li>
-                        <li><a href=\"#\">Legal</a>
-                        </li>
-                        <li><a href=\"#\">Support & Customer Service</a>
-                        </li>
-                        <li><a href=\"#\">Blog</a>
-                        </li>
-                        <li><a href=\"#\">Privacy</a>
-                        </li>
-                        <li><a href=\"#\">Terms</a>
-                        </li>
-                        <li><a href=\"#\">Press</a>
-                        </li>
-                        <li><a href=\"#\">Shipping</a>
-                        </li>
-                        <li><a href=\"#\">Payments & Refunds</a>
-                        </li>
+                        
                     </ul>
-                    <img class=\"main-footer-img\" src=\"";
-        // line 425
-        echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("img/test_footer2.png"), "html", null, true);
-        echo "\" alt=\"Image Alternative text\" title=\"Image Title\" />
+                   
                 </div>
             </footer>
             <div class=\"copyright-area\">
@@ -801,45 +732,45 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
                 </div>
             </div>
             <script src=\"";
-        // line 438
+        // line 378
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jquery.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 439
+        // line 379
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/bootstrap.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 440
+        // line 380
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/icheck.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 441
+        // line 381
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/ionrangeslider.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 442
+        // line 382
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/jqzoom.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 443
+        // line 383
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/card-payment.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 444
+        // line 384
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/owl-carousel.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 445
+        // line 385
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/magnific.js"), "html", null, true);
         echo "\"></script>
             <script src=\"";
-        // line 446
+        // line 386
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/custom.js"), "html", null, true);
         echo "\"></script>
 
 
             <script src=\"";
-        // line 449
+        // line 389
         echo twig_escape_filter($this->env, $this->env->getExtension('assets')->getAssetUrl("js/switcher.js"), "html", null, true);
         echo "\"></script>
 
@@ -876,10 +807,10 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 ";
     }
 
-    // line 362
+    // line 321
     public function block_t($context, array $blocks = array())
     {
-        // line 363
+        // line 322
         echo "                    <div class=\"gap\"></div>
                 ";
     }
@@ -896,7 +827,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 
     public function getDebugInfo()
     {
-        return array (  883 => 363,  880 => 362,  843 => 449,  837 => 446,  833 => 445,  829 => 444,  825 => 443,  821 => 442,  817 => 441,  813 => 440,  809 => 439,  805 => 438,  789 => 425,  759 => 398,  724 => 365,  722 => 362,  695 => 338,  682 => 328,  669 => 318,  656 => 308,  649 => 303,  642 => 298,  635 => 293,  633 => 292,  610 => 272,  604 => 269,  598 => 266,  592 => 263,  586 => 260,  580 => 257,  571 => 251,  565 => 248,  559 => 245,  553 => 242,  547 => 239,  541 => 236,  532 => 230,  526 => 227,  520 => 224,  514 => 221,  508 => 218,  502 => 215,  492 => 208,  486 => 205,  480 => 202,  474 => 199,  468 => 196,  462 => 193,  447 => 181,  441 => 178,  434 => 174,  429 => 172,  422 => 168,  416 => 165,  406 => 158,  377 => 131,  375 => 130,  369 => 126,  366 => 125,  363 => 124,  357 => 121,  353 => 120,  348 => 119,  346 => 118,  324 => 101,  318 => 100,  312 => 99,  306 => 98,  300 => 97,  294 => 96,  288 => 95,  282 => 94,  276 => 93,  270 => 92,  264 => 91,  258 => 90,  250 => 85,  246 => 84,  242 => 83,  238 => 82,  234 => 81,  230 => 80,  226 => 79,  222 => 78,  218 => 77,  214 => 76,  210 => 75,  206 => 74,  194 => 65,  190 => 64,  186 => 63,  182 => 62,  178 => 61,  174 => 60,  170 => 59,  166 => 58,  162 => 57,  158 => 56,  154 => 55,  150 => 54,  146 => 53,  142 => 52,  138 => 51,  123 => 39,  119 => 38,  115 => 37,  111 => 36,  107 => 35,  103 => 34,  99 => 33,  95 => 32,  91 => 31,  87 => 30,  83 => 29,  79 => 28,  75 => 27,  71 => 26,  67 => 25,  63 => 24,  59 => 23,  55 => 22,  51 => 21,  47 => 20,  43 => 19,  37 => 16,  20 => 1,);
+        return array (  814 => 322,  811 => 321,  774 => 389,  768 => 386,  764 => 385,  760 => 384,  756 => 383,  752 => 382,  748 => 381,  744 => 380,  740 => 379,  736 => 378,  712 => 357,  677 => 324,  675 => 321,  657 => 305,  650 => 300,  643 => 296,  638 => 293,  636 => 292,  613 => 272,  607 => 269,  601 => 266,  595 => 263,  589 => 260,  583 => 257,  574 => 251,  568 => 248,  562 => 245,  556 => 242,  550 => 239,  544 => 236,  535 => 230,  529 => 227,  523 => 224,  517 => 221,  511 => 218,  505 => 215,  495 => 208,  489 => 205,  483 => 202,  477 => 199,  471 => 196,  465 => 193,  450 => 181,  444 => 178,  437 => 174,  432 => 172,  425 => 168,  419 => 165,  409 => 158,  405 => 157,  377 => 131,  375 => 130,  369 => 126,  366 => 125,  363 => 124,  357 => 121,  353 => 120,  348 => 119,  346 => 118,  324 => 101,  318 => 100,  312 => 99,  306 => 98,  300 => 97,  294 => 96,  288 => 95,  282 => 94,  276 => 93,  270 => 92,  264 => 91,  258 => 90,  250 => 85,  246 => 84,  242 => 83,  238 => 82,  234 => 81,  230 => 80,  226 => 79,  222 => 78,  218 => 77,  214 => 76,  210 => 75,  206 => 74,  194 => 65,  190 => 64,  186 => 63,  182 => 62,  178 => 61,  174 => 60,  170 => 59,  166 => 58,  162 => 57,  158 => 56,  154 => 55,  150 => 54,  146 => 53,  142 => 52,  138 => 51,  123 => 39,  119 => 38,  115 => 37,  111 => 36,  107 => 35,  103 => 34,  99 => 33,  95 => 32,  91 => 31,  87 => 30,  83 => 29,  79 => 28,  75 => 27,  71 => 26,  67 => 25,  63 => 24,  59 => 23,  55 => 22,  51 => 21,  47 => 20,  43 => 19,  37 => 16,  20 => 1,);
     }
 }
 /* <!DOCTYPE HTML>*/
@@ -1015,7 +946,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                 </div>*/
 /*             </div>*/
 /*             <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-login-dialog">*/
-/*                 <h3 class="widget-title">Member Login</h3>*/
+/*                 <h3 class="widget-title">connexion</h3>*/
 /*                 {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
 /*                     {{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |*/
 /*                     <a href="{{ path('fos_user_security_logout') }}">*/
@@ -1026,14 +957,14 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                 {% endif %}*/
 /*             </div>*/
 /*             <div class="mfp-with-anim mfp-hide mfp-dialog clearfix" id="nav-account-dialog">*/
-/*                 <h3 class="widget-title">Create TheBox Account</h3>*/
-/*                 <p>Ready to get best offers? Let's get started!</p>*/
+/*                 <h3 class="widget-title">Créez votre compte</h3>*/
+/*                 */
 /*                 {% render controller("FOSUserBundle:Registration:register") %}*/
 /*                 <hr />*/
 /* */
 /*                 <div class="gap gap-small"></div>*/
 /*                 <ul class="list-inline">*/
-/*                     <li><a href="#nav-login-dialog" class="popup-text">Already Memeber</a>*/
+/*                     <li><a href="#nav-login-dialog" class="popup-text">Dejà inscrit !</a>*/
 /*                     </li>*/
 /*                 </ul>*/
 /*             </div>*/
@@ -1055,8 +986,8 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                     <div class="navbar-header">*/
 /*                         <button  class="navbar-toggle collapsed" type="button" data-toggle="collapse" data-target="#main-nav-collapse" area_expanded="false"><span class="sr-only">Main Menu</span><span classc="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>*/
 /*                         </button>*/
-/*                         <a class="navbar-brand" href="index.html">*/
-/*                             <img src="{{ asset('img/logo-w.png')}}" alt="Image Alternative text" title="Image Title" />*/
+/*                         <a class="navbar-brand" href="{{path('ecommerce_homepage')}}">*/
+/*                             <img src="{{ asset('img/LOGOAFD.png')}}" alt="Image Alternative text" title="Image Title" />*/
 /*                         </a>*/
 /*                     </div>*/
 /*                     <div class="collapse navbar-collapse" id="main-nav-collapse">*/
@@ -1193,10 +1124,12 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                             {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}*/
 /*                             <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">En ligne</a>*/
 /*                             </li>*/
-/*                             */
+/*                             <li>*/
+/*                              <a href="{{ path('sonata_user_profile_show') }}">Profile</a>*/
+/*                             </li>*/
 /*                             */
 /*                             {% else %}*/
-/*                                  <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">Connection</a>*/
+/*                                  <li><a href="#nav-login-dialog" data-effect="mfp-move-from-top" class="popup-text">connexion</a>*/
 /*                             </li>*/
 /*                             <li><a href="#nav-account-dialog" data-effect="mfp-move-from-top" class="popup-text">Inscription</a>*/
 /*                             </li>*/
@@ -1204,50 +1137,7 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                             <li class="dropdown">*/
 /*                                 <a class="fa fa-shopping-cart" href="shopping-cart.html"></a>*/
 /*                                 <ul class="dropdown-menu dropdown-menu-shipping-cart">*/
-/*                                     <li>*/
-/*                                         <a class="dropdown-menu-shipping-cart-img" href="#">*/
-/*                                             <img src="{{ asset('img/cart/1.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                         </a>*/
-/*                                         <div class="dropdown-menu-shipping-cart-inner">*/
-/*                                             <p class="dropdown-menu-shipping-cart-price">$39</p>*/
-/*                                             <p class="dropdown-menu-shipping-cart-item"><a href="#">Gucci Patent Leather Open Toe Platform</a>*/
-/*                                             </p>*/
-/*                                         </div>*/
-/*                                     </li>*/
-/*                                     <li>*/
-/*                                         <a class="dropdown-menu-shipping-cart-img" href="#">*/
-/*                                             <img src="{{ asset('img/cart/2.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                         </a>*/
-/*                                         <div class="dropdown-menu-shipping-cart-inner">*/
-/*                                             <p class="dropdown-menu-shipping-cart-price">$41</p>*/
-/*                                             <p class="dropdown-menu-shipping-cart-item"><a href="#">Nikon D5200 24.1 MP Digital SLR Camera</a>*/
-/*                                             </p>*/
-/*                                         </div>*/
-/*                                     </li>*/
-/*                                     <li>*/
-/*                                         <a class="dropdown-menu-shipping-cart-img" href="#">*/
-/*                                             <img src="{{ asset('img/cart/3.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                         </a>*/
-/*                                         <div class="dropdown-menu-shipping-cart-inner">*/
-/*                                             <p class="dropdown-menu-shipping-cart-price">$93</p>*/
-/*                                             <p class="dropdown-menu-shipping-cart-item"><a href="#">Apple 11.6" MacBook Air Notebook </a>*/
-/*                                             </p>*/
-/*                                         </div>*/
-/*                                     </li>*/
-/*                                     <li>*/
-/*                                         <a class="dropdown-menu-shipping-cart-img" href="#">*/
-/*                                             <img src="{{ asset('img/cart/4.jpg')}}" alt="Image Alternative text" title="Image Title" />*/
-/*                                         </a>*/
-/*                                         <div class="dropdown-menu-shipping-cart-inner">*/
-/*                                             <p class="dropdown-menu-shipping-cart-price">$82</p>*/
-/*                                             <p class="dropdown-menu-shipping-cart-item"><a href="#">Fossil Women's Original Boyfriend</a>*/
-/*                                             </p>*/
-/*                                         </div>*/
-/*                                     </li>*/
-/*                                     <li>*/
-/*                                         <p class="dropdown-menu-shipping-cart-total">Total: $150</p>*/
-/*                                         <button class="dropdown-menu-shipping-cart-checkout btn btn-primary">Checkout</button>*/
-/*                                     </li>*/
+/*                                  */
 /*                                 </ul>*/
 /*                             </li>*/
 /*                         </ul>*/
@@ -1302,28 +1192,9 @@ class __TwigTemplate_7484db786584d1dc99d88f9b8ec6fe41a2fbbdf745d308fe5d57f32135a
 /*                         </div>*/
 /*                     </div>*/
 /*                     <ul class="main-footer-links-list">*/
-/*                         <li><a href="#">About Us</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Jobs</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Legal</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Support & Customer Service</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Blog</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Privacy</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Terms</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Press</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Shipping</a>*/
-/*                         </li>*/
-/*                         <li><a href="#">Payments & Refunds</a>*/
-/*                         </li>*/
+/*                         */
 /*                     </ul>*/
-/*                     <img class="main-footer-img" src="{{ asset('img/test_footer2.png')}}" alt="Image Alternative text" title="Image Title" />*/
+/*                    */
 /*                 </div>*/
 /*             </footer>*/
 /*             <div class="copyright-area">*/

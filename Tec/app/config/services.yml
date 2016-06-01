@@ -15,3 +15,4 @@ services:
         arguments: [~, Application\ServiceBundle\Entity\Service, ~]
         tags:
             - { name: sonata.admin, manager_type: orm,group: "Services", label: Service }        
+    

@@ -18,14 +18,14 @@ class __TwigTemplate_047b7a0bf07a3e2831527670f48a3d7c1a20a8a9b9f5de443f7fe66913e
     }
 
     // line 1
-    public function getrender_groups($__admin__ = null, $__form__ = null, $__groups__ = null, $__has_tab__ = null)
+    public function getrender_groups($__admin__ = null, $__form__ = null, $__groups__ = null, $__has_tab__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "admin" => $__admin__,
             "form" => $__form__,
             "groups" => $__groups__,
             "has_tab" => $__has_tab__,
-            "varargs" => func_num_args() > 4 ? array_slice(func_get_args(), 4) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();

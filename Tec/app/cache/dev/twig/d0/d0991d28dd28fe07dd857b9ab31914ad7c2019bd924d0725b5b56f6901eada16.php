@@ -195,11 +195,11 @@ class __TwigTemplate_beff5688ec6b35de45ac0dbabae8035845dbe7802113a9f4a335d093798
                 // line 76
                 echo "
                         <form method=\"POST\">
-                            <input type=\"radio\" name=\"note\" id=\"group-1-0\" value=\"5\" /><label for=\"group-1-0\"></label><!--
-                            --><input type=\"radio\" name=\"note\" id=\"group-1-1\" value=\"4\" /><label for=\"group-1-1\"></label><!--
-                            --><input type=\"radio\" name=\"note\" id=\"group-1-2\" value=\"3\" /><label for=\"group-1-2\"></label><!--
-                            --><input type=\"radio\" name=\"note\" id=\"group-1-3\" value=\"2\" /><label for=\"group-1-3\"></label><!--
-                            --><input type=\"radio\" name=\"note\" id=\"group-1-4\"  value=\"1\" /><label for=\"group-1-4\"></label>
+                            <input type=\"radio\" name=\"note\" id=\"group-1-0\" value=\"5\" /><label for=\"group-1-0\">5</label><!--
+                            --><input type=\"radio\" name=\"note\" id=\"group-1-1\" value=\"4\" /><label for=\"group-1-1\">4</label><!--
+                            --><input type=\"radio\" name=\"note\" id=\"group-1-2\" value=\"3\" /><label for=\"group-1-2\">3</label><!--
+                            --><input type=\"radio\" name=\"note\" id=\"group-1-3\" value=\"2\" /><label for=\"group-1-3\">2</label><!--
+                            --><input type=\"radio\" name=\"note\" id=\"group-1-4\"  value=\"1\" /><label for=\"group-1-4\">1</label>
                             <input type=\"submit\" class=\"btn btn-lg btn-ghost btn-black\" label='Rate' >
                             <div class=\"gap\"></div>
                         </form>
@@ -346,11 +346,11 @@ class __TwigTemplate_beff5688ec6b35de45ac0dbabae8035845dbe7802113a9f4a335d093798
 /*                     {% if enable | length == 0 %}*/
 /* */
 /*                         <form method="POST">*/
-/*                             <input type="radio" name="note" id="group-1-0" value="5" /><label for="group-1-0"></label><!--*/
-/*                             --><input type="radio" name="note" id="group-1-1" value="4" /><label for="group-1-1"></label><!--*/
-/*                             --><input type="radio" name="note" id="group-1-2" value="3" /><label for="group-1-2"></label><!--*/
-/*                             --><input type="radio" name="note" id="group-1-3" value="2" /><label for="group-1-3"></label><!--*/
-/*                             --><input type="radio" name="note" id="group-1-4"  value="1" /><label for="group-1-4"></label>*/
+/*                             <input type="radio" name="note" id="group-1-0" value="5" /><label for="group-1-0">5</label><!--*/
+/*                             --><input type="radio" name="note" id="group-1-1" value="4" /><label for="group-1-1">4</label><!--*/
+/*                             --><input type="radio" name="note" id="group-1-2" value="3" /><label for="group-1-2">3</label><!--*/
+/*                             --><input type="radio" name="note" id="group-1-3" value="2" /><label for="group-1-3">2</label><!--*/
+/*                             --><input type="radio" name="note" id="group-1-4"  value="1" /><label for="group-1-4">1</label>*/
 /*                             <input type="submit" class="btn btn-lg btn-ghost btn-black" label='Rate' >*/
 /*                             <div class="gap"></div>*/
 /*                         </form>*/

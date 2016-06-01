@@ -24,7 +24,7 @@ class __TwigTemplate_a8f1fc5e48d6b1bc79f0963057ef0784b6333f1f1588b738c9a0a96a376
     protected function doDisplay(array $context, array $blocks = array())
     {
         // line 3
-        $context["__internal_a6e656f1f900767a88a1dcb51234d3379da6c044ad4bca94d3037d70e8a53ebd"] = $this;
+        $context["__internal_1ce597ce2f630276976f03df135fef732cdd045bed6465eaa9895f7cdafee96b"] = $this;
         // line 1
         $this->parent->display($context, array_merge($this->blocks, $blocks));
     }
@@ -261,7 +261,7 @@ class __TwigTemplate_a8f1fc5e48d6b1bc79f0963057ef0784b6333f1f1588b738c9a0a96a376
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 188
                 echo "                    ";
-                echo $context["__internal_a6e656f1f900767a88a1dcb51234d3379da6c044ad4bca94d3037d70e8a53ebd"]->getform_tree_entry($context["formName"], $context["formData"], true);
+                echo $context["__internal_1ce597ce2f630276976f03df135fef732cdd045bed6465eaa9895f7cdafee96b"]->getform_tree_entry($context["formName"], $context["formData"], true);
                 echo "
                 ";
             }
@@ -279,7 +279,7 @@ class __TwigTemplate_a8f1fc5e48d6b1bc79f0963057ef0784b6333f1f1588b738c9a0a96a376
             foreach ($context['_seq'] as $context["formName"] => $context["formData"]) {
                 // line 194
                 echo "                ";
-                echo $context["__internal_a6e656f1f900767a88a1dcb51234d3379da6c044ad4bca94d3037d70e8a53ebd"]->getform_tree_details($context["formName"], $context["formData"], $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "data", array()), "forms_by_hash", array()));
+                echo $context["__internal_1ce597ce2f630276976f03df135fef732cdd045bed6465eaa9895f7cdafee96b"]->getform_tree_details($context["formName"], $context["formData"], $this->getAttribute($this->getAttribute((isset($context["collector"]) ? $context["collector"] : $this->getContext($context, "collector")), "data", array()), "forms_by_hash", array()));
                 echo "
             ";
             }
@@ -517,13 +517,13 @@ class __TwigTemplate_a8f1fc5e48d6b1bc79f0963057ef0784b6333f1f1588b738c9a0a96a376
     }
 
     // line 420
-    public function getform_tree_entry($__name__ = null, $__data__ = null, $__expanded__ = null)
+    public function getform_tree_entry($__name__ = null, $__data__ = null, $__expanded__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "name" => $__name__,
             "data" => $__data__,
             "expanded" => $__expanded__,
-            "varargs" => func_num_args() > 3 ? array_slice(func_get_args(), 3) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();
@@ -614,13 +614,13 @@ class __TwigTemplate_a8f1fc5e48d6b1bc79f0963057ef0784b6333f1f1588b738c9a0a96a376
     }
 
     // line 444
-    public function getform_tree_details($__name__ = null, $__data__ = null, $__forms_by_hash__ = null)
+    public function getform_tree_details($__name__ = null, $__data__ = null, $__forms_by_hash__ = null, ...$__varargs__)
     {
         $context = $this->env->mergeGlobals(array(
             "name" => $__name__,
             "data" => $__data__,
             "forms_by_hash" => $__forms_by_hash__,
-            "varargs" => func_num_args() > 3 ? array_slice(func_get_args(), 3) : array(),
+            "varargs" => $__varargs__,
         ));
 
         $blocks = array();

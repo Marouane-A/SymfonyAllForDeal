@@ -115,6 +115,10 @@ sonata_user:
     google_authenticator:
         enabled: true
         server:  gmail.com
+    
+    class:
+        user: Application\Sonata\UserBundle\Entity\User
+        group: Application\Sonata\UserBundle\Entity\Group    
     profile:
        
    
